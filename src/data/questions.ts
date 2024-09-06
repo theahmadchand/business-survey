@@ -3,11 +3,12 @@ import { Question } from '../types';
 export const questions: Question[] = [
   {
     id: '1',
-    text: 'Does your business operate in CA?',
-    options: ['Yes', 'No'],
+    text: 'Where does your business operate?',
+    options: ['NY', 'CA', 'Other'],
     next: {
-      Yes: '2',
-      No: 'END',
+      NY: '2',
+      CA: '2',
+      Other: 'END',
     },
   },
   {
@@ -32,6 +33,7 @@ export const questions: Question[] = [
     id: '4',
     text: 'Do you serve hot food?',
     options: ['Yes', 'No'],
+    state: 'CA',
     next: {
       Yes: '5',
       No: '6',
@@ -41,6 +43,7 @@ export const questions: Question[] = [
     id: '5',
     text: 'Are you open past midnight?',
     options: ['Yes', 'No'],
+    state: 'NY',
     next: {
       Yes: 'END',
       No: 'END',
@@ -50,6 +53,7 @@ export const questions: Question[] = [
     id: '6',
     text: 'Do you host live music?',
     options: ['Yes', 'No'],
+    state: 'CA',
     next: {
       Yes: 'END',
       No: 'END',

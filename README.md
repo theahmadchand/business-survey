@@ -66,5 +66,5 @@ Testing is crucial for maintaining the quality and reliability of the applicatio
 
 2. **Start dev server**:
    ```bash
-   yarn install
+   yarn dev
    ```
